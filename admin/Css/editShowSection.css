@@ -1,0 +1,87 @@
+:root{
+    --main-color: #f3f4f8;
+    --sec-color: #5e5e60;
+    --text-color-white: #eeeeee;
+    --text-color-black: #191919;
+    --image-color: #19191952;
+}
+/* start ListEdit */
+.content .container ul{
+    width: 80%;
+    color: var(--sec-color);
+}
+
+.content .container ul li{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    margin: 20px 0;
+}
+
+.content .container ul li h3{
+    margin: 20px;
+}
+
+.content .container ul li .text{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+
+.content .container ul li textarea{
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 200px;
+    resize: none;
+}
+
+.content .container ul #ProductDescription{
+    margin-bottom: 200px;
+}
+
+.content .container ul li img{
+    width: 200px;
+    display: block;
+    margin: auto;
+
+}
+
+.content .container form{
+    padding-bottom: 30px;
+}
+
+.content .container #submit{
+    float: right;
+    background-color: white;
+    border: 0;
+    outline: none;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+}
+
+.content .container #submit:hover{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnDelete{
+    background-color: white;
+    color: var(--sec-color);
+    font-size: 1.2em;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+  
+.btnDelete:hover{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+/* End ListEdit */

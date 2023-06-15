@@ -1,0 +1,12 @@
+Titel: Canon EOS R5 Full-Frame Mirrorless Camera - 8K Video, 45 Megapixel Full-Frame CMOS Sensor, DIGIC X Image Processor, Up to 12 fps Mechanical Shutter (Body Only)
+price: 3699$
+Style: 23-105mm body only
+color: black
+Description:
+High Image Quality featuring a New 45 Megapixel Full-frame CMOS Sensor.
+DIGIC X Image Processor with an ISO range of 100-51200; Expandable to 102400x1.
+High-speed continuous shooting of up to 12 fps with Mechanical Shutter and up to 20 fps electronic (silent) shutter.
+Dual pixel CMOS AF covering approx. 100% area with 1,053 AF areas.
+Subject tracking of people and animals using deep learning technology.
+Dual Memory Card Slots
+Compatible with RF5.2mm F2.8 L Dual Fisheye lens

@@ -1,0 +1,244 @@
+/* Start Var */
+:root{
+    --main-color: #f3f4f8;
+    --sec-color: #5e5e60;
+    --text-color-white: #eeeeee;
+    --text-color-black: #191919;
+    --image-color: #19191952;
+}
+/* End Var */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--main-color);
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global Rules */
+/* Start Menu */
+.menu{
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  background-color: var(--main-color);
+  color: var(--sec-color);
+}
+
+.menu .container .category{
+  position: relative;
+}
+
+.menu .container .category .line{
+  width: 15px;
+  height: 1px;
+  background-color: var(--sec-color);
+  margin: 5px 0;
+}
+
+.menu .container .category .box_category{
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  top: 30px;
+  left: -10px;
+  z-index: 100;
+}
+
+.menu .container .category .box_category .arc{
+  width: 20px;
+  height: 20px;
+  border-color: transparent transparent white transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.menu .container .category .box_category a{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.menu .container .category:hover .box_category{
+  display: block;
+}
+
+.menu .container .search{
+  position: relative;
+  width: 600px;
+  background-color: white;
+  overflow: hidden;
+  margin: 0 20px;
+  padding: 0 10px;
+}
+
+.menu .container .search_input{
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.menu .container .search i{
+  position: absolute;
+  right: 0;
+  top: 25%;
+  margin-right: 10px;
+}
+
+.menu .container ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.menu .container ul li{
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.menu .container ul li h3{
+  margin: 0;
+}
+
+.menu .container ul li a{
+  text-decoration: none;
+  color: var(--sec-color);
+}
+
+.menu .container a:hover{
+  color: var(--text-color-black);
+}
+
+.menu .container ul li .box{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  top: 150%;
+  left: -70%;
+  z-index: 10;
+  border-radius: 5px;
+  display: none;
+}
+
+.menu .container ul li .box .arc{
+  width: 20px;
+  height: 20px;
+  border-color: transparent transparent white transparent;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  top: -30%;
+  left: 10%;
+}
+
+.menu .container ul li:hover .box{
+  display: block;
+}
+/* End Menu */  
+/* Start logIn */
+.login{
+    position: relative;
+    /* padding-top: 25%; */
+}
+
+.login .container{
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    background-color: var(--image-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-color-white);
+    margin: 20px 0;
+}
+
+.login .container input{
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login .container input:focus{
+    outline: none;
+}
+
+.login .container .sex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login .container .sex input{
+    width: 15px;
+    margin: 20px;
+}
+
+.login .container #submit{
+    border: none;
+    font-weight: 700;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+
+.login .container a{
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--sec-color);
+}
+
+
+.login .container #submit:hover{
+    border: var(--sec-color) 1px solid;
+}
+/* End logIn */

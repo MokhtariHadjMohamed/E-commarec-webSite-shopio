@@ -1,0 +1,44 @@
+:root{
+    --main-color: #f3f4f8;
+    --sec-color: #5e5e60;
+    --text-color-white: #eeeeee;
+    --text-color-black: #191919;
+    --image-color: #19191952;
+}
+/* Strat table */
+.table{
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.table table{
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.table table th{
+    color: var(--sec-color);
+    padding: 10px;
+}
+
+.table table td{
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+}
+
+.btnDelete{
+    background-color: white;
+    color: var(--sec-color);
+    font-size: 1.2em;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+
+.btnDelete:hover{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+/* End table */
