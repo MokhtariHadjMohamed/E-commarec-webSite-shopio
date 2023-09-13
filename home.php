@@ -32,12 +32,14 @@
     <div class="menu">
         <div class="container">
             <ul>
-                <li><a href="home.php"><h3>Shopio</h3></a></li>
+                <li><a href="home.php"><h3>T-Store</h3></a></li>
                 <li>
                     <div class="category">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                        <div class="lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
                         <div class="box_category">
                             <div class="arc"></div>
                             <?php
