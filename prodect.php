@@ -135,8 +135,7 @@
                 $productImage1 = null;
                 $productImage2 = null;
                 $productImage3 = null;
-                $style = null;
-                $color = null;
+                $p_carton = null;
                 while ($row = mysqli_fetch_assoc($result)){
                     $nameProduct = $row['ProductName'];
                     $productPrice = $row['ProductPrice'];
@@ -167,58 +166,12 @@
                             }
                             ?>
                         </div>
-                        <h3>Style:</h3>
-                        <div class="style">
-                            <?php 
-                            $style = null;
-                            if (!empty($_GET['Style'])){
-                                $style = $_GET['Style'];
-                                $sql_style = "Select IdProduct, Style From product where ProductName = '$nameProduct' where Style = $style";
-                            }
-                            else if(empty($_GET['color']))
-                                $sql_style = "Select IdProduct, Style From product where ProductName = '$nameProduct' GROUP BY Style ORDER by IdProduct";
-                            else{
-                                $color = $_GET['color'];
-                                $sql_style = "Select IdProduct, Style, Color From product where ProductName = '$nameProduct'and Color = '$color'";
-                            }
-
-                            $result_style = mysqli_query($con, $sql_style);
-                            $select = null;
-                            while($row_style = mysqli_fetch_assoc($result_style)){
-                                $style_IdProduct = $row_style['IdProduct'];
-                                $style = $row_style['Style'];
-                                if($IdProduct == $style_IdProduct)
-                                $select = 'chek';  
-                                else
-                                $select = null;  
-                            ?>
-                            <h5><a href="<?php echo "prodect.php?prodect=$style_IdProduct&style=$style";?>" 
-                            class="<?php echo $select?>"><?php
-                            echo $style;
-                            ?></a></h5>
-                            <?php };?>
-                        </div>
-                        <h3>Color:</h3>
-                        <div class="style">
-                        <?php
-                            $sql_color = "Select IdProduct, Color From product where
-                            ProductName = '$nameProduct' and Style = '$style'";
-                            $result_color = mysqli_query($con, $sql_color);
-                            $select_color = null;
-                            while($row_color = mysqli_fetch_assoc($result_color)){
-                                $color_IdProduct = $row_color['IdProduct'];
-                                $color = $row_color['Color'];
-                                if($IdProduct == $color_IdProduct)
-                                $select_color = 'chek';  
-                                else
-                                $select_color = null;  
-                            ?>
-                            <h5><a href="<?php echo "prodect.php?prodect=$color_IdProduct&color=$color";?>" 
-                            class="<?php echo $select_color;?>"><?php
-                            echo $color;
-                            ?></a></h5>
-                            <?php };?>
-                        </div>
+                        <div class="desc">
+                    <h3>Description:</h3>
+                    <p>
+                    <?php echo $productDescription;?>
+                    </p>
+                </div>
                     </div>
                     <div class="pric">
                         <h1>Pric:<?php echo $productPrice;?>$</h1>
@@ -226,12 +179,7 @@
                         <a href="cart.php?IdProduct=<?php echo $IdProduct?>">Bay Now</a>
                     </div>
                 </div> 
-                <div class="desc">
-                    <h3>Description:</h3>
-                    <p>
-                    <?php echo $productDescription;?>
-                    </p>
-                </div>
+                
             </div>
         </div>
     </div>

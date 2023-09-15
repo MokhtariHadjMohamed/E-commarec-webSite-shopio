@@ -42,13 +42,29 @@
                         </div>
                         <div class="box_category">
                             <div class="arc"></div>
-                            <?php
+                            <div class="bigCategory">
+                                <ul>
+                                <?php
                                 $sql = 'SELECT categoryName FROM `category` WHERE 1';
                                 $result = mysqli_query($con, $sql);
                                 while($row = mysqli_fetch_assoc($result)){
                                     $categoryName = $row['categoryName'];
+                                    echo "<li href='search.php?search_input=$categoryName'
+                                    class='categoryItem'><a>$categoryName</a></li>";
+                                }?>
+                                </ul>
+
+                            </div>
+                            <div class="lineHer"></div>
+                            <div class="categorySmall" id="categorySmall">
+                                <?php
+                                $sql = 'SELECT subCatergoryName FROM `subcatrgory` WHERE 1';
+                                $result = mysqli_query($con, $sql);
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $categoryName = $row['subCatergoryName'];
                                     echo "<a href='search.php?search_input=$categoryName'>$categoryName</a>";
-                            }?>
+                                }?>
+                            </div>
                         </div>
                     </div>
                 </li>
