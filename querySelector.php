@@ -8,7 +8,12 @@
     $con = mysqli_connect($host,$user,$pass,$db,$port);
     session_start();
 
-    $sql = 'SELECT categoryName FROM `category` WHERE 1';
+    $category = $_GET['category'];
+
+    $sql = "SELECT * FROM `subcatrgory` WHERE 
+    `subcatrgory`.`idCategory` = (SELECT `idCategory`
+     FROM `category` WHERE `category`.`categoryName`
+      = '$category')";
     $result = mysqli_query($con, $sql);
 
     $array_list = [];

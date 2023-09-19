@@ -45,7 +45,7 @@
                             <div class="bigCategory">
                                 <ul>
                                 <?php
-                                $sql = 'SELECT categoryName FROM `category` WHERE 1';
+                                $sql = 'SELECT * FROM `category` ORDER BY `category`.`categoryName` DESC';
                                 $result = mysqli_query($con, $sql);
                                 while($row = mysqli_fetch_assoc($result)){
                                     $categoryName = $row['categoryName'];
@@ -57,13 +57,13 @@
                             </div>
                             <div class="lineHer"></div>
                             <div class="categorySmall" id="categorySmall">
-                                <?php
+                                <!-- <?php
                                 $sql = 'SELECT subCatergoryName FROM `subcatrgory` WHERE 1';
                                 $result = mysqli_query($con, $sql);
                                 while($row = mysqli_fetch_assoc($result)){
                                     $categoryName = $row['subCatergoryName'];
                                     echo "<a href='search.php?search_input=$categoryName'>$categoryName</a>";
-                                }?>
+                                }?> -->
                             </div>
                         </div>
                     </div>

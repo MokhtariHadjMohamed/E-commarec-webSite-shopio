@@ -133,7 +133,7 @@ body {
 .menu .container .box_category {
   position: absolute;
   width: 80%;
-  display: flex;
+  display: none;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
