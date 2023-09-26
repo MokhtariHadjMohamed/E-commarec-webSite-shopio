@@ -1,5 +1,0 @@
-titel: Logitech K835 Wired Mechanical Keyboard ESports Gaming Office Green Red Axis Personality Key CAP Computer Laptop
-price: 32$
-style: blue switch/ red switch
-color: black white
-Description:
