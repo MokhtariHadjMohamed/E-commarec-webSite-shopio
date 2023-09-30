@@ -102,7 +102,7 @@
                 $productImage1 = $row['ProductImage1'];
                 echo '<a href="prodect.php?prodect='. $idProduct .'" class="item">'.
                 '<div class="post">'.
-                    '<img src='.$productImage1.' alt="">'.
+                    "<img src='$productImage1' alt='$productName'>".
                     "<h3>$productName</h3>"
                     ."<p>";
                 if(str_word_count($productDescription) < 30)
@@ -159,9 +159,9 @@
                 $productDescription = $row['ProductDescription'];
                 $productPrice = $row['ProductPrice'];
                 $productImage1 = $row['ProductImage1'];
-                echo '<a href="prodect.php?prodect='. $idProduct .'" class="item">'.
+                echo "<a href='prodect.php?prodect=$idProduct' class='item'>".
                 '<div class="post">'.
-                    '<img src='.$productImage1.' alt="">'.
+                    "<img src='$productImage1' alt='$productName'>".
                     "<h3>$productName</h3>"
                     ."<p>";
                 if(str_word_count($productDescription) < 30)

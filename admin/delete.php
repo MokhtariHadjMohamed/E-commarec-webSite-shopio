@@ -34,29 +34,29 @@
         }
 
         if(isset($_GET['tabel']) && $_GET['tabel'] == 'PopularProducts'){
-            $IdClient = $_GET['idClient'];
-            $sql = "DELETE FROM popular_products WHERE IdClient = $IdClient";
+            $idProduct = $_GET['idProduct'];
+            $sql = "DELETE FROM popular_products WHERE idProduct = $idProduct";
             mysqli_query($con, $sql);
             header("Location: dashboard.php");
         }
 
         if(isset($_GET['tabel']) && $_GET['tabel'] == 'FeaturedProducts'){
-            $IdClient = $_GET['idClient'];
-            $sql = "DELETE FROM featured_products WHERE IdClient = $IdClient";
+            $idProduct = $_GET['idProduct'];
+            $sql = "DELETE FROM featured_products WHERE idProduct = $idProduct";
             mysqli_query($con, $sql);
             header("Location: dashboard.php");
         }
 
         if(isset($_GET['tabel']) && $_GET['tabel'] == 'DealsOfTheDay'){
-            $IdClient = $_GET['idClient'];
-            $sql = "DELETE FROM featured_products WHERE IdClient = $IdClient";
+            $idProduct = $_GET['idProduct'];
+            $sql = "DELETE FROM featured_products WHERE idProduct = $idProduct";
             mysqli_query($con, $sql);
             header("Location: dashboard.php");
         }
 
         if(isset($_GET['tabel']) && $_GET['tabel'] == 'PURCHASEORDERS'){
-            $IdClient = $_GET['idClient'];
-            $sql = "DELETE FROM shipping WHERE IdClient = $IdClient";
+            $idProduct = $_GET['idProduct'];
+            $sql = "DELETE FROM shipping WHERE idProduct = $idProduct";
             mysqli_query($con, $sql);
             header("Location: dashboard.php");
         }

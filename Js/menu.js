@@ -16,7 +16,8 @@ function loadXML(category) {
     let categorySmall = document.querySelector("#categorySmall");
     categorySmall.innerHTML = ""
     j.forEach(element => {
-      categorySmall.innerHTML = categorySmall.innerHTML + `<a href='search.php?search_input=$categoryName'>${element['subCatergoryName']}</a>`
+      categorySmall.innerHTML = categorySmall.innerHTML + `<a href='search.php?search_input=${element['subCatergoryName']}
+      '>${element['subCatergoryName']}</a>`
     });
   }
   

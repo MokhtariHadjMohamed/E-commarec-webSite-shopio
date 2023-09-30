@@ -42,9 +42,9 @@
                                     $sql = 'SELECT * FROM `category` ORDER BY `category`.`categoryName` DESC';
                                     $result = mysqli_query($con, $sql);
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        $categoryName = $row['categoryName'];
-                                        echo "<li href='search.php?search_input=$categoryName'
-                                class='categoryItem'><a>$categoryName</a></li>";
+                                        $categoryNameBig = $row['categoryName'];
+                                        echo "<li class='categoryItem'>
+                                        <a href='search.php?search_input=$categoryNameBig'>$categoryNameBig</a></li>";
                                     } ?>
                                 </ul>
                                 <a href=""></a>
@@ -52,13 +52,14 @@
                             </div>
                             <div class="lineHer"></div>
                             <div class="categorySmall" id="categorySmall">
-                                <!-- <?php
+                                <?php
                                         $sql = 'SELECT subCatergoryName FROM `subcatrgory` WHERE 1';
                                         $result = mysqli_query($con, $sql);
                                         while ($row = mysqli_fetch_assoc($result)) {
-                                            $categoryName = $row['subCatergoryName'];
-                                            echo "<a href='search.php?search_input=$categoryName'>$categoryName</a>";
-                                        } ?> -->
+                                            $categoryNameSmall = $row['subCatergoryName'];
+                                            echo "<a class='categoryNameSmall' href='search.php?search_input=".$categoryNameSmall . "'>
+                                            $categoryNameSmall</a>";
+                                        } ?>
                             </div>
                         </div>
                     </div>
